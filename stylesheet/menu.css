@@ -1,0 +1,56 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    background-color: #000;
+    margin: 0;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.navi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+.navi li a {
+    font-size: 5vw;
+    color: #fff;
+    position: relative;
+}
+
+.navi li a:before {
+    position: absolute;
+    color: yellow;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    content: attr(data-text);
+    transition: 0.6s;
+}
+
+.navi li a:hover:before {
+    width: 100%;
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../img/menuimgs/menu_1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: background-image 2s ease-out;
+}

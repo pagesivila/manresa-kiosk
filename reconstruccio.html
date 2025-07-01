@@ -1,0 +1,747 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>La reconstrucció del retaule</title>
+<!--STYLESHEET-->
+<link type="text/css" rel="stylesheet" href="stylesheet/3dhop.css"/>
+<!--SPIDERGL-->
+<script type="text/javascript" src="js/spidergl.js"></script>
+<!--JQUERY-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<!--PRESENTER-->
+<script type="text/javascript" src="js/presenter.js"></script>
+<!--3D MODELS LOADING AND RENDERING-->
+<script type="text/javascript" src="js/nexus.js"></script>
+<!--
+	<script type="text/javascript" src="js/nexus.monitor.js"></script>
+-->
+<script type="text/javascript" src="js/ply.js"></script>
+<!--TRACKBALLS-->
+<script type="text/javascript" src="js/trackball_sphere.js"></script>
+<script type="text/javascript" src="js/trackball_turntable.js"></script>
+<script type="text/javascript" src="js/trackball_turntable_pan.js"></script>
+<script type="text/javascript" src="js/trackball_pantilt.js"></script>
+<!--UTILITY-->
+<script type="text/javascript" src="js/init.js"></script>
+<!-- BOOTSTRAP -->
+<link type="text/css" href="stylesheet/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet/docs.css">
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<!-- IDIOMES I CREDITS --> 
+<div id="idiomescredits"> 
+	<div style="position:absolute; right:20px; top:20px; height:50%; z-index:2; background-color:transparent;">
+		<a class="btn-group lngs">
+		  <img src="img/cat.png" role="button" class="lng ca active" lan="cat" aria-pressed="true" width="45" height="45" style="margin-right:10px;">
+		  <img src="img/eng.png" role="button" class="lng en" lan="eng" aria-pressed="false" width="45" height="45" style="margin-right:0px;">
+		</a>
+	</div> 
+	<div style="position:absolute; right:20px; bottom:0px; height:8%; z-index:2; background-color:transparent;">
+		<button class="btn btn-light me-2 cat" type="button" data-bs-toggle="modal" data-bs-target="#help">?</button>
+		<button class="btn btn-light me-2 d-none eng" type="button" data-bs-toggle="modal" data-bs-target="#help">?</button>
+		<button class="btn btn-light me-2 cat" type="button" data-bs-toggle="modal" data-bs-target="#credits">Crèdits</button>
+		<button class="btn btn-light me-2 d-none eng" type="button" data-bs-toggle="modal" data-bs-target="#credits">Credits</button>
+	</div>
+</div>  
+<!-- FI IDIOMES I CREDITS -->
+ 
+<!-- 3DHOP -->
+<body>
+
+<div id="3dhop" class="tdhop"onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
+ <div id="toolbar">
+  <img id="home"     class="cat" title="Inici"                  src="skins/dark/home.png"      /><img id="home"     class="eng d-none" title="Home"                  src="skins/dark/home.png"      /><br/>
+  <img id="zoomin"   class="cat" title="Amplia"               src="skins/dark/zoomin.png"          /><img id="zoomin"   class="eng d-none" title="Zoom In"               src="skins/dark/zoomin.png"          /><br/>
+  <img id="zoomout"  class="cat" title="Redueix"              src="skins/dark/zoomout.png"         /><img id="zoomout"  class="eng d-none" title="Zoom Out"              src="skins/dark/zoomout.png"         /><br/>
+  <a role="button" onclick="openPage('menu.html')"><img id="exit" title="Sortir" class="cat" src="skins/dark/exit.png"/><img id="exit" 	 title="Exit"	class="eng d-none"			   src="skins/dark/exit.png"		/></a><br>
+<!--  <img id="light_on" title="Disable Light Control" src="skins/transparent_dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="light"    title="Enable Light Control"  src="skins/transparent_dark/lightcontrol.png"    /><br/>
+  <img id="hotspot_on" title="Hide Hotspots"         src="skins/transparent_dark/pin_on.png" 
+														  style="position:absolute; visibility:hidden;"/>
+  <img id="hotspot"    title="Show Hotspots"         src="skins/transparent_dark/pin.png"          /><br/>
+  <img id="measure_on" title="Disable Measure Tool"  src="skins/transparent_dark/measure_on.png" 
+														  style="position:absolute; visibility:hidden;"/>
+  <img id="measure"    title="Enable Measure Tool"   src="skins/transparent_dark/measure.png"      /><br/>
+  <img id="color_on"    title="Disable Solid Color"    src="skins/transparent_dark/color_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="color"       title="Enable Solid Color"     src="skins/transparent_dark/color.png"/><br/><img id="full_on"  title="Exit Full Screen"      src="skins/transparent_dark/full_on.png"         style="position:absolute; visibility:hidden;"/>
+  <img id="full"     title="Full Screen"           src="skins/transparent_dark/full.png" /><br/>
+    -->
+ </div>
+	<canvas id="draw-canvas" style="background-image: url(skins/backgrounds/grey_gradient.jpg)"/>
+</div>
+
+<!-- MODAL CREDITS -->
+	  <div class="modal user-select-none modal-lg" id="credits" tabindex="-1" aria-labelledby="creditsLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0" style="opacity: 0.9;">
+		  <div class="modal-header border-0">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+			<div class="modal-body pt-0">
+			   <div class="container-fluid">
+				<div class="row">
+				  <p class="cat">Aquest projecte s'ha dut a terme en el marc del període d'estada internacional al VCLab CNR-ISTI de la tesi doctoral que l'Anna Pagès i Vilà està fent a l'Universitat de Girona. Fet sota la supervisió de Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) i dels directors de tesi Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) i Dr. Joan Bosch (UdG).</p>
+				  <p class="eng d-none">This project has been carried out as part of the international stay period at VCLab CNR-ISTI for the doctoral thesis that Anna Pagès i Vilà is doing at the Universtat de Girona. Done under the supervision of Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) and thesis supervisors Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) and Dr. Joan Bosch (UdG).</p>
+				</div>
+				<div class="row">
+				  <div class="col me-1">
+					<div class="row mt-3">
+					<center>
+					  <img align="right" class="ms-1 py-2" src="img/logoupc.png" width="70px;">
+					  <img align="right" class="me-2 py-3" src="img/logovirvig.png" width="80px;">
+					  <img align="right" class="mx-2 py-2" src="img/logoudg.png" width="80px;">
+					</center>
+					</div>
+					<div class="row">
+					<center><img align="right" src="img/logoesp.png" width="250px;"></center>
+					</div>
+				  </div>
+				  <div class="col ms-1">
+					<br><center><img align="left" src="img/vcglogo.png" width="250px;"></center>
+				  </div>
+				</div>
+				<div class="row mt-5">
+				  <p class="cat mb-2" align="justify"><br><small>Volem agrair al Museu de Manresa – Museu Barroc de Catalunya per concedir-nos accés a les obres d'art i permetre la seva digitalització, així com autoritzar-nos el seu ús. També volem expressar el nostre agraïment al programa GIRAVOLT del Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) per facilitar-nos els models fotogramètrics de les escenes de l'Anunciació i de la Pentecosta del retaule i autoritzar-nos-ne l'ús.</p>
+				  <p class="cat" align="justify">Aquest treball ha estat parcialment suportat pels projectes PID2021-122136OB-C21 i PID2021-122136OB-C22 finançats per MCIN/AEI/ 10.13039/501100011033 i pel FEDER Una manera de fer Europa, així com pel projecte PID2020-114339GB-C21 finançat pel MCIN/AEI, i desenvolupat en el context del Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 amb el suport del Departament de Recerca i Universitats de la Generalitat de Catalunya.</small></p>
+				  <p class="eng d-none" align="justify"><br><small>We would like to thank the Museu de Manresa – Museu Barroc de Catalunya in granting access to the artworks and permitting their digitization, and authorizing us their use. We also want to express our gratitude to the GIRAVOLT programa of the Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) for providing us with the photogrammetric models of the scenes of the Annunciation and Pentecost of the altarpiece and granting us their use.</p>
+				  <p class="eng d-none" align="justify">This work has been partially supported by the projects PID2021-122136OB-C21 and PID2021-122136OB-C22 funded by MCIN/AEI/ 10.13039/501100011033 and by ERDF A way of making Europe and by the project PID2020-114339GB-C21 funded by the MCIN/AEI, and developed in the context of Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 with the support of the Departament de Recerca i Universitats of the Generalitat de Catalunya.</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	  </div>
+	<!-- FI MODAL CREDITS -->
+	<!-- MODAL HELP -->
+	<div class="modal modal-lg user-select-none" id="help" tabindex="-1" aria-labelledby="helpLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0 user-select-none" style="opacity: 0.9;">
+		  <div class="modal-header border-0">
+		    <h5 class="modal-title col-11 text-center cat">Controls generals</h5>
+		    <h5 class="modal-title col-11 text-center eng d-none" align="center">General controls</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+			<div class="modal-body">
+			   <div class="container-fluid">
+				<div class="container">
+				<div class="row">
+				  <div class="col-3"></div>
+				  <div class="col-1"><img src="skins/dark/home.png" width="40px;"/></div>
+				  <div class="col cat">Retorna a la vista inicial</div>
+				  <div class="col eng d-none">Return to the inicial view</div>
+				</div><br>
+				<div class="row">
+				  <div class="col-3"></div>
+				  <div class="col-1"><img src="skins/dark/zoomin.png" width="40px;"/></div>
+				  <div class="col cat">Amplia</div>
+				  <div class="col eng d-none">Zoom out</div>
+				</div><br>
+				<div class="row">
+				  <div class="col-3"></div>
+				  <div class="col-1"><img src="skins/dark/zoomout.png" width="40px;"/></div>
+				  <div class="col cat">Redueix</div>
+				  <div class="col eng d-none">Zoom in</div>
+				</div><br>
+				<div class="row">
+				  <div class="col-3"></div>
+				  <div class="col-1"><img src="skins/dark/exit.png" width="40px;"/></div>
+				  <div class="col cat">Retorna a la pàgina anterior</div>
+				  <div class="col eng d-none">Return to the previous page</div>
+				</div><br>
+				</div>
+				<div class="row">
+				<hr>
+				  <div class="col">
+				    <h5 class="cat" align="center">Controls per a ratolí</h5>
+				    <h5 class="eng d-none" align="center">Mouse wheel controls</h5>
+					<br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/left.png" height="40px;"/></div>
+				      <div class="col cat">Girar: botó esquerre i moure</div>
+				      <div class="col eng d-none">Rotate: left mouse button and move</div>
+				    </div><br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/wheel.png" height="40px;"/></div>
+				      <div class="col cat">Ampliar/reduir: roda del ratolí</div>
+				      <div class="col eng d-none">Zoom: mouse wheel</div>
+				    </div><br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/right.png" height="40px;"/></div>
+				      <div class="col cat">Desplaçar: botó dret i moure</div>
+				      <div class="col eng d-none">Pan: right mouse button and move</div>
+				    </div><br>
+				  </div>
+				  <div class="col">
+				    <h5 class="cat" align="center">Controls per a pantalla tàctil</h5>
+				    <h5 class="eng d-none" align="center">Touch screen controls</h5>
+					<br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/rotate.png" height="40px;"/></div>
+				      <div class="col cat">Girar: tocar i moure</div>
+				      <div class="col eng d-none">Rotate: Touch and move</div>
+				    </div><br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/spread.png" height="40px;"/></div>
+				      <div class="col cat">Ampliar/Reduir: separar/ajuntar dos dits</div>
+				      <div class="col eng d-none">Zoom in/out: pinch/spread</div>
+				    </div><br>
+				    <div class="row">
+				      <div class="col-2"><img src="skins/help/hold.png" height="40px;"/></div>
+				      <div class="col cat">Desplaçar: mantenir premut i moure</div>
+				      <div class="col eng d-none">Pan: press and move</div>
+				    </div><br>
+				  </div>
+				</div>
+				<div class="row"><center>
+				  <div class="cat">El doble clic/toc amb el dit centra la <i>trackball</i> en el punt on s'ha tocat i hi fa una mica de zoom.</div>
+				  <div class="eng d-none">Double click/pan re-centers the trackball on the clicked point and zoom in a little.</div>
+				</center></div>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<!-- FI MODAL HELP -->
+
+</body>
+
+
+
+<script type="text/javascript">
+var presenter = null;
+
+function setup3dhop() { 
+	presenter = new Presenter("draw-canvas");
+
+	presenter.setNexusMaxCacheSize(2048*(1<<20)); //2048MB
+
+	presenter.setScene({
+		meshes: {
+			"daurats_m" : { url: "models/reconstruccio/daurat.nxz" },
+			"estructura_m" : { url: "models/reconstruccio/estructura.nxs" },
+			"persona_m" : { url: "models/reconstruccio/persona.ply" },
+			"1-2k_m" : { url: "models/reconstruccio/1-2k.nxz" },
+			"2-2k_m" : { url: "models/reconstruccio/2-2k.nxz" },
+			"3-2k_m" : { url: "models/reconstruccio/3-2k.nxz" },
+			"4-2k_m" : { url: "models/reconstruccio/4-2k.nxz" },
+			"5-2k_m" : { url: "models/reconstruccio/5-2k.nxz" },
+			"6-2k_m" : { url: "models/reconstruccio/6-2k.nxz" },
+			"7-2k_m" : { url: "models/reconstruccio/7-2k.nxz" },
+			"8-2k_m" : { url: "models/reconstruccio/8-2k.nxz" },
+			"9-2k_m" : { url: "models/reconstruccio/9-2k.nxz" },
+			"10-2k_m" : { url: "models/reconstruccio/10-2k.nxz" },
+			"11-2k_m" : { url: "models/reconstruccio/11-2k.nxz" },
+			"12-2k_m" : { url: "models/reconstruccio/12-2k.nxz" },
+			"11est-2k_m" : { url: "models/reconstruccio/11est-2k.nxz" },
+			"12-2k_m" : { url: "models/reconstruccio/12-2k.nxz" },
+			"13-2k_m" : { url: "models/reconstruccio/13-2k.nxz" },
+			"14-2k_m" : { url: "models/reconstruccio/14-2k.nxz" },
+			"15-2k_m" : { url: "models/reconstruccio/15-2k.nxz" },
+			"16a-2k_m" : { url: "models/reconstruccio/16-2k.nxz" },
+			"17a-2k_m" : { url: "models/reconstruccio/17-1k.nxz" },
+			"18a-2k_m" : { url: "models/reconstruccio/18-1k.nxz" },
+			"19-2k_m" : { url: "models/reconstruccio/19-2k.nxz" },
+			"20-2k_m" : { url: "models/reconstruccio/20-2k.nxz" },
+			"21-2k_m" : { url: "models/reconstruccio/21-2k.nxz" },
+			"22-2k_m" : { url: "models/reconstruccio/22-2k.nxz" },
+			"23-2k_m" : { url: "models/reconstruccio/23-2k.nxz" },
+			"24a-2k_m" : { url: "models/reconstruccio/24-1k.nxz" },
+			"25a-2k_m" : { url: "models/reconstruccio/25-1k.nxz" },
+			"26-2k_m" : { url: "models/reconstruccio/26-2k.nxz" },
+			"27-2k_m" : { url: "models/reconstruccio/27-2k.nxz" },
+			"28dr-2k_m" : { url: "models/reconstruccio/28dr-2k.nxz" },
+			"28e-2k_m" : { url: "models/reconstruccio/28e-2k.nxz" },
+			"29dr-2k_m" : { url: "models/reconstruccio/29dr-2k.nxz" },
+			"29e-2k_m" : { url: "models/reconstruccio/29e-2k.nxz" },
+			"30-2k_m" : { url: "models/reconstruccio/30-2k.nxz" },
+			"31-2k_m" : { url: "models/reconstruccio/31-2k.nxz" },
+			"g1-2k_m" : { url: "models/reconstruccio/g1-2k.nxz" },
+			"g2-2k_m" : { url: "models/reconstruccio/g2fosc.nxz" },
+		}, 
+		modelInstances : {
+			"daurats" : { mesh : "daurats_m",
+				specularColor : [0.9, 0.9, 0.9, 32],
+				backfaceColor   : [ 0.33, 0.33, 0.33, 0.0 ],
+				transform : {
+						translation: [0, 0, 0.002],
+						rotation: [-90, 0, 0],
+					},
+				alpha: 0.6,
+				useTransparency: true,
+			},
+			"grid" : { mesh : "estructura_m",
+				backfaceColor   : [ 0.33, 0.33, 0.33, 0.0 ],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"persona" : { mesh : "persona_m",
+				backfaceColor   : [ 0.33, 0.33, 0.33, 0.0 ],
+				transform : { 
+				// y, z, x
+				  translation : [5.5, -7.15, -10.45],
+				  rotation : [0.0, -90, 0.0],
+				} 
+			},
+			"1-2k" : { mesh : "1-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"2-2k" : { mesh : "2-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"3-2k" : { mesh : "3-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"4-2k" : { mesh : "4-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"5-2k" : { mesh : "5-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"6-2k" : { mesh : "6-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"7-2k" : { mesh : "7-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"8-2k" : { mesh : "8-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"9-2k" : { mesh : "9-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"10-2k" : { mesh : "10-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"11-2k" : { mesh : "11-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"12-2k" : { mesh : "12-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"11est-2k" : { mesh : "11est-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"12-2k" : { mesh : "12-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"13-2k" : { mesh : "13-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"14-2k" : { mesh : "14-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"15-2k" : { mesh : "15-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"16a-2k" : { mesh : "16a-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"17a-2k" : { mesh : "17a-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"17b-2k" : { mesh : "17b-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"18a-2k" : { mesh : "18a-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"19-2k" : { mesh : "19-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"20-2k" : { mesh : "20-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"21-2k" : { mesh : "21-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"22-2k" : { mesh : "22-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"23-2k" : { mesh : "23-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"24a-2k" : { mesh : "24a-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"24b-2k" : { mesh : "24b-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"25a-2k" : { mesh : "25a-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"25b-2k" : { mesh : "25b-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"26-2k" : { mesh : "26-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"27-2k" : { mesh : "27-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"28dr-2k" : { mesh : "28dr-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"28e-2k" : { mesh : "28e-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"29dr-2k" : { mesh : "29dr-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"29e-2k" : { mesh : "29e-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"30-2k" : { mesh : "30-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"31-2k" : { mesh : "31-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"g1-2k" : { mesh : "g1-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+			"g2-2k" : { mesh : "g2-2k_m",
+				specularColor : [0.2, 0.2, 0.2, 32],
+				transform : {
+						translation: [0, 0, 0],
+						rotation: [-90, 0, 0],
+					},
+			},
+		},
+		trackball: {
+			type : PanTiltTrackball,
+			trackOptions: {
+				startPanX: 0.0,
+				startPanY: 0.0,
+				startAngleX: 0.0,
+				startAngleY: 0.0,
+				startDistance: 1.5,
+				minMaxPanX: [-0.9, 0.9],
+				minMaxPanY: [-0.7, 0.7],
+				minMaxAngleX: [-50.0, 50.0],
+				minMaxAngleY: [-50.0, 50.0],
+				minMaxDist: [0.1, 1.2]
+			  }
+		},
+		space: {
+		  centerMode: "scene",
+		  radiusMode: "scene",
+		}
+	});
+	
+//	presenter.setTrackballPosition([0.01835, 0.1130, 0.5729, -11.6883, 0.8206]);
+	presenter.animateToTrackballPosition([0.01833, 0.10119, 0.45829, -14.2092, 0.8935]);
+}
+
+function actionsToolbar(action) {
+	if(action=='home') presenter.animateToTrackballPosition([0.01833, 0.10119, 0.45829, -14.2092, 0.8935]); 
+	else if(action=='zoomin') presenter.zoomIn();
+	else if(action=='zoomout') presenter.zoomOut(); 
+	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); } 
+	else if(action=='hotspot'|| action=='hotspot_on') { 
+    presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); 
+    hotspotSwitch(); }
+	else if(action=='measure' || action=='measure_on') {
+    presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+	else if(action=='color' || action=='color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
+	else if(action=='full'  || action=='full_on') fullscreenSwitch(); 
+}
+
+// GRID FUNCTIONS
+function addGrid(instance, step) {
+	var rad = 0.5 / presenter.sceneRadiusInv; //grandaria graella
+	var bb = getBBox(instance);
+	
+	var XC = (bb[0] + bb[3]) / 2.0;
+	var YC = bb[4];
+	var ZC = (bb[2] + bb[5]) / 2.0;
+	
+	var gStep,gStepNum;
+	if(step===0.0) {
+		gStepNum = 5;
+		gStep = rad/gStepNum;
+	}
+	else {
+		gStep = step;
+		gStepNum = Math.ceil(rad/gStep);
+	}
+	
+	var linesBuffer, grid, gg;
+	linesBuffer = [];
+	for (gg = -gStepNum; gg <= gStepNum; gg+=1)
+	{
+			linesBuffer.push([XC + (gg*gStep), YC, ZC + (-gStep*gStepNum)]);
+			linesBuffer.push([XC + (gg*gStep), YC, ZC + ( gStep*gStepNum)]);
+			linesBuffer.push([XC + (-gStep*gStepNum), YC, ZC + (gg*gStep)]);
+			linesBuffer.push([XC + ( gStep*gStepNum), YC, ZC + (gg*gStep)]);
+	}
+	grid = presenter.createEntity("baseGrid", "lines", linesBuffer);
+	grid.color = [0.9, 0.9, 0.9, 0.3];
+	grid.zOff = 0.0;
+	grid.useTransparency = true;
+	presenter.repaint();
+}
+
+function removeGrid() {
+	presenter.deleteEntity("baseGrid");
+}
+
+function getBBox(instance) {
+	var mname = presenter._scene.modelInstances[instance].mesh;
+	var vv = presenter._scene.meshes[mname].renderable.mesh.basev;
+	var bbox = [-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE];	
+	var point,tpoint;
+	
+	for(var vi=1; vi<(vv.length / 3); vi++){
+		point = [vv[(vi*3)+0], vv[(vi*3)+1], vv[(vi*3)+2], 1.0]
+		tpoint = SglMat4.mul4(presenter._scene.modelInstances[instance].transform.matrix, point);
+		if(tpoint[0] > bbox[0]) bbox[0] = tpoint[0];
+		if(tpoint[1] > bbox[1]) bbox[1] = tpoint[1];
+		if(tpoint[2] > bbox[2]) bbox[2] = tpoint[2];
+		if(tpoint[0] < bbox[3]) bbox[3] = tpoint[0];
+		if(tpoint[1] < bbox[4]) bbox[4] = tpoint[1];
+		if(tpoint[2] < bbox[5]) bbox[5] = tpoint[2];
+	}		
+	return bbox;
+}
+
+function startupGrid(){
+	var vv = presenter._scene.meshes[presenter._scene.modelInstances["grid"].mesh].renderable.mesh.basev;
+	if (typeof vv === 'undefined')
+		setTimeout(startupGrid, 50);
+	else {
+		addGrid("grid", 1.0); //mida quadrats 1 metre, si poso 0.4 seran 4cm xe
+	}
+}
+// GRID FUNCTIONS
+
+// NO RIGHT CLICK
+$(document).bind("contextmenu",function(e){
+  return false;
+    });
+// NO RIGHT CLICK
+
+// LANGUAGE FUNCTIONS
+var currLang = "cat";
+
+function setLan(newLanguage) {
+	$(".cat, .eng").addClass('d-none');
+	$("." + newLanguage).toggleClass('d-none');
+	currLang = newLanguage;
+
+	$(".lngs > .active").button('toggle');
+	switch(newLanguage) {
+	  case 'eng':
+		$('.en').button('toggle');
+		break;
+	  default:
+		$('.ca').button('toggle');
+	}
+}
+
+function openPage(url){
+	window.open(url + "?lang=" + currLang, "_self"); 
+}
+// LANGUAGE FUNCTIONS
+
+// TIMER PAGE RELOAD
+var tim;
+
+function timer() {
+	window.clearTimeout(tim);  // cancel the timer on each click
+	tim = setTimeout(function() {currLang = "cat"; openPage('menu.html');},300000);  // set new 5 minutes timer
+}
+
+window.onpointerdown = function() {timer()}
+// TIMER PAGE RELOAD
+
+$(document).ready(function() {
+// 3DHOP SETUP START
+	init3dhop();
+	setup3dhop();
+	startupGrid();
+// 3DHOP SETUP END
+
+// LANGUAGE SETUP START
+	var currParam;
+	var pageParams = [];
+	var paramString = document.URL.split('?')[1];
+	if(paramString != undefined) {
+		paramString = paramString.split('&');
+		for(var i = 0; i < paramString.length; i++){
+			currParam = paramString[i].split('=');
+			if(currParam[0] == "lang")
+				currLang = currParam[1];
+		}
+	}
+
+	setLan(currLang);
+
+	$(".lng").click(function() { setLan($(this).attr('lan')); });
+// LANGUAGE SETUP END
+
+	timer();
+});
+</script>
+
+</html>

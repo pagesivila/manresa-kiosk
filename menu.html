@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>El retaule del Roser de Sant Pere Màrtir de Manresa</title>
+    <link rel="stylesheet" href="stylesheet/menu.css">
+    <!--jQuery CDN -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" href="stylesheet/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet/docs.css">
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<!-- BOOTSTRAP -->
+</head>
+
+<body>
+    <div class="container user-select-none">
+        <ul class="navi cat">
+            <li data-image="1" ><a role="button" onclick="openPage('reconstruccio.html')" class="cat link-underline link-underline-opacity-0" data-text="LA&nbsp;RECONSTRUCCIÓ&nbsp;DEL&nbsp;RETAULE" style="color:yellow"><p class="cat m-0">LA&nbsp;RECONSTRUCCIÓ&nbsp;DEL&nbsp;RETAULE</p></a></li>
+            <li data-image="2"><a role="button" onclick="openPage('historia.html')" class="cat link-underline link-underline-opacity-0" data-text="LA&nbsp;HISTÒRIA&nbsp;DEL&nbsp;RETAULE"><p class="cat m-0">LA&nbsp;HISTÒRIA&nbsp;DEL&nbsp;RETAULE</p></a></li>
+            <li data-image="3"><a role="button" onclick="openPage('iconografia.html')" class="cat link-underline link-underline-opacity-0" data-text="LA&nbsp;ICONOGRAFIA&nbsp;DEL&nbsp;RETAULE"><p class="cat m-0">LA&nbsp;ICONOGRAFIA&nbsp;DEL&nbsp;RETAULE</p></a></li>
+        </ul>
+		<ul class="navi d-none eng">
+            <li data-image="1"><a role="button" onclick="openPage('reconstruccio.html')" class="eng d-none link-underline link-underline-opacity-0" data-text="THE&nbsp;ALTARPIECE'S&nbsp;RECONSTRUCTION" style="color:yellow"><p class="eng d-none m-0">THE&nbsp;ALTARPIECE'S&nbsp;RECONSTRUCTION</p></a></li>
+            <li data-image="2"><a role="button" onclick="openPage('historia.html')" class="eng d-none link-underline link-underline-opacity-0" data-text="THE&nbsp;ALTARPIECE'S&nbsp;HISTORY"><p class="eng d-none m-0">THE&nbsp;ALTARPIECE'S&nbsp;HISTORY</p></a></li>
+            <li data-image="3"><a role="button" onclick="openPage('iconografia.html')" class="eng d-none link-underline link-underline-opacity-0" data-text="THE&nbsp;ALTARPIECE'S&nbsp;ICONOGRAPHY"><p class="eng d-none m-0">THE&nbsp;ALTARPIECE'S&nbsp;ICONOGRAPHY</p></a></li>
+        </ul>
+        <div class="photo"></div>
+    </div>
+
+<!-- IDIOMES I CREDITS --> 
+<div id="idiomescredits"> 
+	<div style="position:absolute; right:20px; top:20px; height:50%; z-index:2; background-color:transparent;">
+		<a class="btn-group lngs">
+		  <img src="img/cat.png" role="button" class="lng ca active" lan="cat" aria-pressed="true" width="45" height="45" style="margin-right:10px;">
+		  <img src="img/eng.png" role="button" class="lng en" lan="eng" aria-pressed="false" width="45" height="45" style="margin-right:0px;">
+		</a>
+	</div> 
+	<div style="position:absolute; right:20px; bottom:0px; height:8%; z-index:2; background-color:transparent;">
+		<button class="btn btn-light me-2 cat" type="button" data-bs-toggle="modal" data-bs-target="#credits">Crèdits</button>
+		<button class="btn btn-light me-2 d-none eng" type="button" data-bs-toggle="modal" data-bs-target="#credits">Credits</button>
+	</div>
+</div>  
+<!-- FI IDIOMES I CREDITS --> 
+<!-- MODAL CREDITS -->
+	  <div class="modal user-select-none modal-lg" id="credits" tabindex="-1" aria-labelledby="creditsLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+		  <div class="modal-header border-0">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+			<div class="modal-body pt-0">
+			   <div class="container-fluid">
+				<div class="row">
+				  <p class="cat">Aquest projecte s'ha dut a terme en el marc del període d'estada internacional al VCLab CNR-ISTI de la tesi doctoral que l'Anna Pagès i Vilà està fent a l'Universitat de Girona. Fet sota la supervisió de Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) i dels directors de tesi Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) i Dr. Joan Bosch (UdG).</p>
+				  <p class="eng d-none">This project has been carried out as part of the international stay period at VCLab CNR-ISTI for the doctoral thesis that Anna Pagès i Vilà is doing at the Universtat de Girona. Done under the supervision of Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) and thesis supervisors Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) and Dr. Joan Bosch (UdG).</p>
+				</div>
+				<div class="row">
+				  <div class="col me-1">
+					<div class="row mt-3">
+					<center>
+					  <img align="right" class="ms-1 py-2" src="img/logoupc.png" width="70px;">
+					  <img align="right" class="me-2 py-3" src="img/logovirvig.png" width="80px;">
+					  <img align="right" class="mx-2 py-2" src="img/logoudg.png" width="80px;">
+					</center>
+					</div>
+					<div class="row">
+					<center><img align="right" src="img/logoesp.png" width="250px;"></center>
+					</div>
+				  </div>
+				  <div class="col ms-1">
+					<br><center><img align="left" src="img/vcglogo.png" width="250px;"></center>
+				  </div>
+				</div>
+				<div class="row mt-5">
+				  <p class="cat mb-2" align="justify"><br><small>Volem agrair al Museu de Manresa – Museu Barroc de Catalunya per concedir-nos accés a les obres d'art i permetre la seva digitalització, així com autoritzar-nos el seu ús. També volem expressar el nostre agraïment al programa GIRAVOLT del Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) per facilitar-nos els models fotogramètrics de les escenes de l'Anunciació i de la Pentecosta del retaule i autoritzar-nos-ne l'ús.</p>
+				  <p class="cat" align="justify">Aquest treball ha estat parcialment suportat pels projectes PID2021-122136OB-C21 i PID2021-122136OB-C22 finançats per MCIN/AEI/ 10.13039/501100011033 i pel FEDER Una manera de fer Europa, així com pel projecte PID2020-114339GB-C21 finançat pel MCIN/AEI, i desenvolupat en el context del Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 amb el suport del Departament de Recerca i Universitats de la Generalitat de Catalunya.</small></p>
+				  <p class="eng d-none" align="justify"><br><small>We would like to thank the Museu de Manresa – Museu Barroc de Catalunya in granting access to the artworks and permitting their digitization, and authorizing us their use. We also want to express our gratitude to the GIRAVOLT program of the Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) for providing us with the photogrammetric models of the scenes of the Annunciation and Pentecost of the altarpiece and granting us their use.</p>
+				  <p class="eng d-none" align="justify">This work has been partially supported by the projects PID2021-122136OB-C21 and PID2021-122136OB-C22 funded by MCIN/AEI/ 10.13039/501100011033 and by ERDF A way of making Europe and by the project PID2020-114339GB-C21 funded by the MCIN/AEI, and developed in the context of Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 with the support of the Departament de Recerca i Universitats of the Generalitat de Catalunya.</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	  </div>
+	<!-- FI MODAL CREDITS -->
+
+    <script>
+var counter = 1; //instantiate a counter
+var maxImage = 3; //the total number of images that are available
+
+function myTimer() {
+    counter++;
+    $('.photo').css({ 'background-image': 'url(img/menuimgs/menu_' + (counter) + '.png)' });
+    $('.navi li a').css( 'color' , 'white' );
+    $('.navi li:nth-child(' + counter + ') > a').css( 'color' , 'yellow' );
+    if (counter == maxImage) counter = 0; //reset to start
+}
+
+var myInterval = setInterval(myTimer, 5000);
+
+$('.navi li').mouseenter(function () {
+    clearInterval(myInterval);
+    $('.navi li a').css( 'color' , 'white' );
+    counter = $(this).attr('data-image');
+    $('.photo').css({ 'background-image': 'url(img/menuimgs/menu_' + (counter) + '.png)' });
+    if (counter == maxImage) counter = 0; //reset to start
+})
+$('.navi li').mouseleave(function () {
+    myInterval = setInterval(myTimer, 5000);
+})
+
+// NO RIGHT CLICK
+$(document).bind("contextmenu",function(e){
+  return false;
+    });
+// NO RIGHT CLICK
+
+// LANGUAGE FUNCTIONS
+var currLang = "cat";
+
+function setLan(newLanguage) {
+	$(".cat, .eng").addClass('d-none');
+	$("." + newLanguage).toggleClass('d-none');
+	currLang = newLanguage;
+
+	$(".lngs > .active").button('toggle');
+	switch(newLanguage) {
+	  case 'eng':
+		$('.en').button('toggle');
+		break;
+	  default:
+		$('.ca').button('toggle');
+	}
+}
+
+function openPage(url){
+	window.open(url + "?lang=" + currLang, "_self"); 
+}
+// LANGUAGE FUNCTIONS
+
+$(document).ready(function() {
+// LANGUAGE SETUP START
+	var currParam;
+	var pageParams = [];
+	var paramString = document.URL.split('?')[1];
+	if(paramString != undefined) {
+		paramString = paramString.split('&');
+		for(var i = 0; i < paramString.length; i++){
+			currParam = paramString[i].split('=');
+			if(currParam[0] == "lang")
+				currLang = currParam[1];
+		}
+	}
+
+	setLan(currLang);
+
+	$(".lng").click(function() { setLan($(this).attr('lan')); });
+// LANGUAGE SETUP END
+});
+</script>
+</body>
+
+</html>

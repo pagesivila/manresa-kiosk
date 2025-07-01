@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link type="text/css" href="stylesheet/bootstrap513.min.css" rel="stylesheet">
+  <link href="stylesheet/historia.css" rel="stylesheet">
+  <title>La història del retaule</title>
+  <!--link rel="icon" type="image/x-icon" href="./images/bootstrap.ico"-->
+</head>
+
+<body>
+<!-- IDIOMES I CREDITS --> 
+<div id="idiomescredits"> 
+	<div style="position:absolute; right:20px; top:20px; height:10%; background-color:transparent;">
+		<a class="btn-group lngs">
+		  <img src="img/cat.png" role="button" class="lng ca active" lan="cat" aria-pressed="true" width="45" height="45" style="margin-right:10px;">
+		  <img src="img/eng.png" role="button" class="lng en" lan="eng" aria-pressed="false" width="45" height="45" style="margin-right:0px;">
+		</a>
+	</div> 
+	<div style="position:absolute; right:20px; bottom:0px; height:8%; background-color:transparent;">
+		<button class="btn btn-light me-2 cat" type="button" data-bs-toggle="modal" data-bs-target="#credits">Crèdits</button>
+		<button class="btn btn-light me-2 d-none eng" type="button" data-bs-toggle="modal" data-bs-target="#credits">Credits</button>
+	</div>
+</div>   
+<!-- FI IDIOMES I CREDITS -->
+
+	<div class="col-1">
+	  <a role="button" onclick="openPage('menu.html')"><img id="exit" class="cat position-absolute top-0 ms-3 mt-3" title="Sortir" src="skins/dark/exit.png" style="opacity: 0.5;max-width:50px;"><img id="exit" class="eng d-none position-absolute top-0 ms-3 mt-3" title="Exit" src="skins/dark/exit.png" style="opacity: 0.5;max-width:50px;"></a>
+	</div>
+  <div class="container">
+    <!-- Carousel https://getbootstrap.com/docs/5.1/components/carousel/ -->
+    <div class="carousel-container justify-content-center">
+      <!-- data-bs-interval: the amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle -->
+      <!-- data-bs wrap: whether the carousel should cycle continuously (i.e go from first to last and vice-versa) -->
+      <div id="vertical-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false"
+        data-bs-wrap="false" data-bs-keyboard="false">
+        <!-- Carousel slide indicators -->
+        <ol class="carousel-indicators">
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="2"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="3"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="4"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner user-select-none">
+          <!-- Carousel item represents each slide -->
+<!--CAPELLA ROSER -->
+          <div class="carousel-item active" id="itemRoser">
+              <div class="row align-items-center" style="height: 20%">
+					<div class="container">
+					  <div class="row align-items-center" id="textCapella">
+						<div class="col-8">
+						<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">La capella del Roser</h1>
+						<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">The Rosary chapel </h1>
+						  <p class="cat" align="justify" style="font-size:1vw;">A l'església de Sant Domènec, que va pertànyer al convent amb el mateix nom fins el 1877 -quan va passar a dir-se de Sant Pere Màrtir-, cada capella estava dedicada a un sant. La capella de la Mare de Déu del Roser era la segona de la banda de l'epístola començant pels peus de l'església. El culte al Roser era molt popular i tenia molts devots, però a partir de 1503, amb la fundació de la Confraria del Roser<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Sarret i Arbós, J. Historia religiosa de Manresa : iglésies i convents . Caixa d'Estalvis de Manresa; 1987 - 1924. (p.176-177)" style="text-decoration: none;">❝❞</a> i a partir de la victòria a la batalla de Lepant (1571) de la qual es va dir que havia estat possible gràcies a la intervenció de la Mare de Déu, com declararà Pius V. Aquests dos moments doncs, provocaran que el culte al Roser augmenti de forma extraordinària arreu de Catalunya.<br><br>
+						  En conseqüència, a l'església de Sant Domènec de Manresa es va fer evident la necessitat d'ampliar la capella, que ja no podia acollir a tots els devots. El 1614 el Prior i els administradors de la confraria van demanar de fer més fonda la capella, per tal de poder acollir a tots els adeptes al culte, i es van començar les obres. Aquestes s'allargarien fins el segle següent, fins el 1642, quan un cop acabades es va decidir substituir el retaule que hi havia aleshores per un nou retaule.</p>
+						  <p class="eng" align="justify" style="font-size:1vw;">In the church of Sant Domènec, which belonged to the convent with the same name until 1877 -when its name changed to Sant Pere Màrtir-, each chapel was dedicated to a saint. The chapel of Our Lady of the Rosary was the second one on the Epistle side starting from the entrance of the church. The cult of the Rosary was very popular and had many devotees, and it increased extraordinarily in Catalonia from two specific dates: in 1503 with the foundation of the Confraternity of the Rosary<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Sarret i Arbós, J. Historia religiosa de Manresa : iglésies i convents . Caixa d'Estalvis de Manresa; 1987 - 1924. (p.176-177)" style="text-decoration: none;">❝❞</a>, and in 1571 with the victory at the Battle of Lepanto, which Pius V declared to have been made possible by the intervention of the Virgin Mary.<br><br>
+						  Consequently, in the church of Sant Domènec de Manresa, the need to expand the chapel, which had become too small, became evident. In 1614 the Prior and the administrators of the confraternity asked to make it deeper, in order to be able to accommodate all those following the cult, and the works began. These lasted until the following century, specifically until 1642, when they were finished and it was decided to replace the altarpiece that was there then with a new one.</p>
+						<br>
+						</div>
+						<div class="col ps-4 ms-4">
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						  <img type="button" data-bs-toggle="modal" data-bs-target="#planol1997" src="img/planol-1997s.png" class="img-fluid" alt="Responsive image" style="max-width: 45%;">
+						  <div class="modal" id="planol1997" tabindex="-1" aria-labelledby="planol1997Label" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" style="margin: 1rem auto;">
+							  <div class="modal-content user-select-none">
+							    <div class="modal-header border-0 pb-0">
+							      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							    </div>
+							    <div class="modal-body pt-0">
+								  <div class="container-fluid">
+								    <center><img src="img/planol-1997.jpg" class="img-fluid my-2" alt="img/planol-1997.jpg" type="button" data-bs-dismiss="modal"></center>
+								    <small><p class="cat m-0">Plànol fet per E. Sànchez en el marc de la intervenció arqueològica de la Plaça de Sant Domènec de 1997. Imatge recuperada del portal <i>Calaix</i> de la Generalitat de Catalunya. </p></small>
+								    <small><p class="eng d-none m-0" >Plan made by E. Sànchez as part of the 1997 archaeological intervention in Plaça de Sant Domènec. Image taken from the Generalitat de Catalunya's webpage <i>Calaix</i>.</p></small>
+								  </div>
+							    </div>
+							  </div>
+						    </div>
+						  </div>
+						<br><br>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#extRoser" src="img/ext-23s.png" class="img-fluid" alt="Responsive image" style="max-width: 45%;">
+						<div class="modal" id="extRoser" tabindex="-1" aria-labelledby="extRoserLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+							   <div class="container-fluid">
+								<center><img src="img/ext-23.png" class="img-fluid my-2" alt="img/ext-23s.png" type="button" data-bs-dismiss="modal" style="max-width:80%"></center>
+								<small><p class="cat m-0">Vista de l'exterior de la capella del Roser i la seva cúpula. Imatge recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0">Exterior veiw of the Rosary chapel and it’s dome. Image taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							   </div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<br><br>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#ext-08" src="img/ext-08s.png" class="img-fluid" alt="Responsive image" style="max-width: 45%;">
+						<div class="modal" id="ext-08" tabindex="-1" aria-labelledby="ext-08Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+							   <div class="container-fluid">
+								<center><img src="img/ext-08.png" class="img-fluid my-2" alt="img/ext-08.png" type="button" data-bs-dismiss="modal"></center>
+								<small><p class="cat m-0"> Vista aèria de l'església de Sant Pere Màrtir. Imatge feta per Llorenç Gamisans i Vilaplana actualment conservada a l'Arxiu Comarcal del Bages, recuperada de la pàgina web <i>Arxius en línia</i> de la Generalitat de Catalunya.</p></small>
+								<small><p class="eng d-none m-0"> Aerial view of the Sant Pere Màrtir church. Image taken by Llorenç Gamisans i Vilaplana currently conserved at the Arxiu Comarcal del Bages, taken from the Generalitat de Catalunya's webpage <i>Arxius en línia</i>.</p></small>
+							   </div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<br><br>
+						<!-- FI FOTO MODAL -->
+						</div>
+					  </div>
+					</div>
+              </div>
+          </div>
+<!--JOAN GRAU -->
+          <div class="carousel-item">
+              <div class="row align-items-center" style="height: 80%">
+				<div class="container">
+				  <div class="row align-items-center">
+					<div class="col-8">
+					<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Joan Grau: l'escultor </h1>
+					<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Joan Grau: the sculptor</h1>
+					  <p class="cat" align="justify" style="font-size:1vw;">L'escultor escollit serà Joan Grau. Nascut a Constantí (1608-1685)<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Yeguas Gassó, J. 'Apunts d’escultura del segle XVII a la Segarra i la Plana de Lleida'. Urtx: revista cultural de l’Urgell 2007(20):158-175. (p.161)" style="text-decoration: none;">❝❞</a> va ser l'iniciador d'una nissaga familiar d'escultors establerts a la Plana de l'Om (Manresa)<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. 'Aproximació a l’obra escultòrica de Joan Grau'. Dovella 1988(25):15-21.(p.17)" style="text-decoration: none;">❝❞</a> que va constituir un taller molt actiu i pròsper. Treballarà a Igualada, Sallent, Sant Benet de Bages, Rajadell, Ferran, Calaf, Manresa, Fals, Súria i Sant Fruitós de Bages entre d'altres i en alguns d'aquests ho farà amb la col·laboració del seu fill Francesc Grau. En el cas particular del retaule del Roser de Manresa, va ser contractat el 17 de gener de 1942<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Els Tallers d'escultura al Bages del segle XVII . Caixa de Manresa. Obra Cultural; 1990. (p.61)" style="text-decoration: none;">❝❞</a> i va dur a terme la tasca entre c. 1642-1646<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. El Limitado itinerario de Joan Grau (c.1605-1685) : tres vias de contacto con la modernidad europea : estampas, libros de devoción e importación de obras de arte. In Los caminos y el arte: VI Congreso Nacional de Historia del Arte, Santiago de Compostela, 16-20 de junio, 1986, Vol. 2 1989 (pp. 441-451).(p. 443)." style="text-decoration: none;">❝❞</a>, podem dir que era una de les millors peces realitzades quan ja està en la seva etapa de maduresa. La data de construcció, 1644, la deixarà esculpida en un medalló col·locat al centre de la segona andana, sobre la fornícula central que acollia l'escultura (actualment desapareguda) de la Mare de Déu del Roser.<br><br>
+					  Malauradament gran part de l'obra d'aquest escultor va desaparèixer l'estiu de 1936 i només gràcies a les fotografies que estudiosos i aficionats a l'art i al patrimoni havien pres abans d'aquests fets.</p>
+					  <p class="eng d-none" align="justify" style="font-size:1vw;">The sculptor chosen for the construction of this altarpiece was Joan Grau. Born in Constantí (1608-1685)<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Yeguas Gassó, J. 'Apunts d’escultura del segle XVII a la Segarra i la Plana de Lleida'. Urtx: revista cultural de l’Urgell 2007(20):158-175. (p.161)" style="text-decoration: none;">❝❞</a> he was the initiator of a family line of sculptors established in Plana de l'Om (Manresa)<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. 'Aproximació a l’obra escultòrica de Joan Grau'. Dovella 1988(25):15-21.(p.17)" style="text-decoration: none;">❝❞</a> who set up a very active and prosperous workshop. Grau worked in Igualada, Sallent, Sant Benet de Bages, Rajadell, Ferran, Calaf, Manresa, Fals, Súria and Sant Fruitós de Bages among others and in some of these places he worked with the help of his son Francesc Grau. In the specific case of the Rosary altarpiece of Manresa -which we can say was one of the best works of the sculptor-, he was hired on January 17, 1942<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Els Tallers d'escultura al Bages del segle XVII . Caixa de Manresa. Obra Cultural; 1990. (p.61)" style="text-decoration: none;">❝❞</a> and carried out the task between c. 1642-1646<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. El Limitado itinerario de Joan Grau (c.1605-1685) : tres vias de contacto con la modernidad europea : estampas, libros de devoción e importación de obras de arte. In Los caminos y el arte: VI Congreso Nacional de Historia del Arte, Santiago de Compostela, 16-20 de junio, 1986, Vol. 2 1989 (pp. 441-451).(p. 443)." style="text-decoration: none;">❝❞</a>. He sculpted the date of construction, 1644, in a medallion placed in the center of the second level, on the central niche that hosted the sculpture -currently missing- of Our Lady of the Rosary.<br><br>
+					  Unfortunately, much of this sculptor's work disappeared in the summer of 1936 -at the beginning of the Spanish Civil War- and it is only thanks to the photographs that scholars and enthusiasts had taken before these events that we can know what it was like.</p>
+					</div>
+					<div class="col ps-4 ms-4">
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<br><img type="button" data-bs-toggle="modal" data-bs-target="#medallo1644" src="img/medallo1644.png" class="img-fluid" alt="Responsive image" style="max-width: 50%;"><br><br><br>
+						<div class="modal" id="medallo1644" tabindex="-1" aria-labelledby="medallo1644Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/medallo1644.png" class="img-fluid my-2" alt="img/medallo1644.png" type="button" data-bs-dismiss="modal"></center>
+								<small><p class="cat m-0">Fragment del retaule del Roser en què s'hi ha esculpit el número 1644.</p></small>
+								<small><p class="eng d-none m-0">Fragment of the Rosary altarpiece where the number 1644 is sculpted.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#_BNC5823_retallada" src="img/_BNC5823_retalladas.png" class="img-fluid" alt="Responsive image" style="max-width: 50%;"><br><br>
+						<div class="modal" id="_BNC5823_retallada" tabindex="-1" aria-labelledby="_BNC5823_retalladaLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered" style="margin: 1rem auto;">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/_BNC5823_retallada.png" class="img-fluid my-2" alt="img/_BNC5823_retallada.png" type="button" data-bs-dismiss="modal" style="max-width:90%"></center>
+								<small><p class="cat m-0"> Fotografia del retaule del Roser de Sant Pere Màrtir de Manresa en el seu emplaçament original, treta del Llibre d'Or del Rosari. Serra i Boldú. 1924.</p></small>
+								<small><p class="eng d-none m-0">Photography of the Rosary altarpiece of Sant Pere Màrtir church (Manresa) in its original location, published in the Llibre d'Or del Rosari. Serra i Boldú. 1924.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+				  </div>
+				</div>
+			  </div>
+		  </div>
+<!--DAURADORS -->
+          <div class="carousel-item">
+              <div class="row align-items-center" style="height: 80%">
+				<div class="container">
+				  <div class="row align-items-center" style="height: 100%">
+					<div class="col-8">
+					<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Gabriel Adrià i Magí Torrebruna: els dauradors </h1>
+					<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Gabriel Adrià and Magí Torrebruna: the gilders </h1>
+					  <p class="cat" align="justify" style="font-size:1vw;">Un retaule no està complert fins que no ha estat policromat i daurat. I aquest procés va iniciar-se el 1656<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Els Tallers d'escultura al Bages del segle XVII . Caixa de Manresa. Obra Cultural; 1990. (p.180)" style="text-decoration: none;">❝❞</a> quan Gabriel Adrià és contractat després d'haver vençut un concurs. Aquest daurador tenia la particularitat d'omplir els relleus de motius antropomòrfics i zoomòrfics. Al relleu del <i>Naixement</i>, dit també <i>Adoració dels pastors</i> cobreix les teles amb aquest motius tant característics<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Alba daurada : l'art del retaule a Catalunya, 1600-1792 circa . Museu d'Art de Girona; 2006. (p.105)" style="text-decoration: none;">❝❞</a>.
+					  <br><br> Gabriel Adrià però, va traspassar abans d'acabar la policromia del retaule, i la feina la va continuar Magí Torrebruna, daurador d'origen cardoní, contractada per la víuda del primer daurador. Aquest daurador va ser un dels més prolífics de la seva època: sabem que va treballar a Sant Pere de Matamargó, a la parroquial de Cardona, a Moià<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Galobart i Soler, J. 'Pau Sunyer, escultor, i Magí Torrebruna, daurador, autors del retaule de Sant Miquel i dels Sants Màrtirs de l’església parroquial de Moià'. Ausa 2006; 16(132):131-138. (p.133)" style="text-decoration: none;">❝❞</a>, a Sant Vicenç dels Horts, al Castell de Cardona, a Terrassa, a Barcelona i a Valls. Els motius que plasmarà als relleus del retaule del Roser de Manresa que policromarà disten dels de Gabriel Adrià, Magí optarà per motius vegetals, pintats sobre el pa d'or i esgrafiats<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Alba daurada : l'art del retaule a Catalunya, 1600-1792 circa . Museu d'Art de Girona; 2006. (p.105)" style="text-decoration: none;">❝❞</a>.</p>
+					  <p class="eng d-none" align="justify" style="font-size:1vw;">An altarpiece is not complete until it has been polychromed and gilded. And this process began in 1656<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Els Tallers d'escultura al Bages del segle XVII . Caixa de Manresa. Obra Cultural; 1990. (p.180)" style="text-decoration: none;">❝❞</a> when Gabriel Adrià was hired after winning a competition. This gilder had the particularity of filling the reliefs with anthropomorphic and zoomorphic motifs, as we can see in the relief of the <i>Nativity</i>, also called <i>Adoration of the Shepherds</i>, where he covers the cloths of the characters with these very characteristic motifs<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Alba daurada : l'art del retaule a Catalunya, 1600-1792 circa . Museu d'Art de Girona; 2006. (p.105)" style="text-decoration: none;">❝❞</a>.<br><br>
+					  Gabriel Adrià, however, passed away before finishing his work, so it was continued by Magí Torrebruna, a gilder from Cardona, hired by the widow of the first gilder. This gilder was one of the most prolific of his time in Catalonia: we know that he worked in Sant Pere de Matamargó, in the parish of Cardona, in Moià<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Galobart i Soler, J. 'Pau Sunyer, escultor, i Magí Torrebruna, daurador, autors del retaule de Sant Miquel i dels Sants Màrtirs de l’església parroquial de Moià'. Ausa 2006; 16(132):131-138. (p.133)" style="text-decoration: none;">❝❞</a>, in Sant Vicenç dels Horts, in the Castle of Cardona, in Terrassa, in Barcelona and in Valls. The motifs that he put in the reliefs of the Rosary altarpiece of Manresa were far from those of Gabriel Adrià. Magí opted for vegetal motifs, painted on gold leaf and sgraffito<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bosch Ballbona, J. Alba daurada : l'art del retaule a Catalunya, 1600-1792 circa . Museu d'Art de Girona; 2006. (p.105)" style="text-decoration: none;">❝❞</a>.</p>
+					<br><br>
+					</div>
+					<div class="col ps-4 ms-4">
+					  <!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#DSC09633-gabriel" src="img/DSC09633-gabriels.png" class="img-fluid" alt="Responsive image" style="max-width: 50%;"><br><br>
+						<div class="modal" id="DSC09633-gabriel" tabindex="-1" aria-labelledby="DSC09633-gabrielLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+							  <center><img src="img/DSC09633-gabriel.png" class="img-fluid my-2" alt="img/DSC09633-gabriel.png" type="button" data-bs-dismiss="modal" style="max-width:80%"></center>
+								<small><p class="cat m-0">Fotografia d'un relleu del retaule del Roser de Sant Pere Màrtir de Manresa.</p></small>
+								<small><p class="eng d-none m-0">Photography of a relief of the Rosary altarpiece of Sant Pere Màrtir of Manresa.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#DSC08667-magi" src="img/DSC08667-magis.png" class="img-fluid" alt="Responsive image" style="max-width: 50%;"><br><br>
+						<div class="modal" id="DSC08667-magi" tabindex="-1" aria-labelledby="DSC08667-magiLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/DSC08667-magi.png" class="img-fluid my-2" alt="img/DSC08667-magi.png" type="button" data-bs-dismiss="modal" style="max-width:75%"></center>
+								<small><p class="cat"> Fotografia d'un relleu del retaule del Roser de Sant Pere Màrtir de Manresa.</p></small>
+								<small><p class="eng d-none"> Photography of a relief of the Rosary altarpiece of Sant Pere Màrtir of Manresa.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+				  </div>
+				</div>
+			  </div>
+		  </div>
+<!--GUERRA CIVIL -->
+          <div class="carousel-item">
+              <div class="row align-items-center" style="height: 20%">
+				<div class="container">
+				  <div class="row align-items-center">
+					<div class="col-8">
+					<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Guerra civil i destrucció </h1>
+					<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">The Spanish Civil War and the destruction </h1>
+					  <p class="cat" align="justify" style="font-size:1vw;">Tot i que l'església de Sant Pere Màrtir de Manresa no va ser incendiada, el 23 de juliol de 1936 es van treure la majoria dels objectes que hi havia a l'interior i es van cremar en una foguera encesa a la plaça Fius i Palà<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Barbé i Rius, M. 'Transformació i desaparició del convent dels Pares Predicadors Dominics de Manresa els segles XIX  i XX.'. Dovella 2016; 118:47-54. (p.53)" style="text-decoration: none;">❝❞</a>.<br><br>
+					  Però els revolucionaris del bàndol republicà no en van tenir prou amb cremar les imatges i objectes de l'interior, pocs mesos més tard, el setembre del mateix 1936, van decidir enderrocar-la. De fet, a Manresa es van enderrocar set esglésies -amb el salvament de la Seu gràcies a la intervenció de Lluis Rubiralta (un dels actors principals en la salvació del patrimoni manresà) i Jeroni Martorell (arquitecte de la Generalitat)-.<br><br>
+					  Pel que fa a Sant Pere Màrtir, l'Ajuntament hi va estar d'acord perquè d'aquesta manera es faria realitat el projecte de reforma urbana de 1933 que projectava l'apertura d'una gran plaça en aquella localització<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Sánchez Campoy, J. & Vila i Carbasa, J.M. Memòria de la intervenció realitzada a la plaça de Sant Domènec de Manresa. Campanyes de 1996 i 1997; 1997. (p.10)" style="text-decoration: none;">❝❞</a>, i de fet, també s'havia d'enderrocar el Teatre-Conservatori que des de 1876 ocupava el que havia estat el claustre del convent. Degut a la pressió de diverses entitats però, finalment no es va ensorrar aquesta part<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Barbé i Rius, M. 'Transformació i desaparició del convent dels Pares Predicadors Dominics de Manresa els segles XIX  i XX.'. Dovella 2016; 118:47-54. (p.54)" style="text-decoration: none;">❝❞</a>.</p>
+					  <p class="eng" align="justify" style="font-size:1vw;">Although the church of Sant Pere Màrtir de Manresa was not set on fire like other churches, on July 23, 1936 most of the objects inside were removed and burned in a bonfire lit in Fius i Palà square<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Barbé i Rius, M. 'Transformació i desaparició del convent dels Pares Predicadors Dominics de Manresa els segles XIX  i XX.'. Dovella 2016; 118:47-54. (p.53)" style="text-decoration: none;">❝❞</a>. <br><br>
+					  But the revolutionaries on the republican side were not satisfied with only burning the images and objects inside. A few months later, in September of the same year -1936-, they decided to demolish the entire church. In fact, seven churches were dismantled in Manresa -the cathedral was excluded from its demolishment thanks to the intervention of Lluis Rubiralta (one of whom rescued the major part of heritage in Manresa and the surrounding area) and Jeroni Martorell (architect of the Catalan government)-. <br><br>
+					  As for Sant Pere Màrtir, the City Council agreed with its demolition because it was the only way to achieve the urban reform project that had been planned in 1933, which projected the opening of a large square in that location<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Sánchez Campoy, J. & Vila i Carbasa, J.M. Memòria de la intervenció realitzada a la plaça de Sant Domènec de Manresa. Campanyes de 1996 i 1997; 1997. (p.10)" style="text-decoration: none;">❝❞</a>. And in fact, the Theater-Conservatory that since 1876 had occupied what had been the cloister of the convent according to the project also had to be demolished, but due to pressure from various entities, this part was finally not carried out<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Barbé i Rius, M. 'Transformació i desaparició del convent dels Pares Predicadors Dominics de Manresa els segles XIX  i XX.'. Dovella 2016; 118:47-54. (p.54)" style="text-decoration: none;">❝❞</a>.</p>
+					</div>
+					<div class="col ps-0" align="right">
+					  <!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-01" src="img/int-01s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-01" tabindex="-1" aria-labelledby="int-01Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/int-01.png" class="img-fluid my-2" alt="img/int-01.png" type="button" data-bs-dismiss="modal"></center>
+								<small><p class="cat m-0" align="left"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge feta per Josep M. Rosal i d'Argullol actualment conservada a l'Arxiu Comarcal del Bages, recuperada de la pàgina web <i>Arxius en línia</i> de la Generalitat de Catalunya.</p></small>
+								<small><p class="eng d-none m-0" align="left">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Josep M. Rosal i d'Argullol currently conserved at the Arxiu Comarcal del Bages, taken from the Generalitat de Catalunya's webpage <i>Arxius en línia</i>.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-03" src="img/int-03s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-03" tabindex="-1" aria-labelledby="int-03Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/int-03.png" class="img-fluid my-2" alt="img/int-03.png" type="button" data-bs-dismiss="modal"></center>
+								<small><p class="cat m-0" align="left"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0" align="left">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-04" src="img/int-04s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-04" tabindex="-1" aria-labelledby="int-04Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/int-04.png" class="img-fluid my-2" alt="img/int-04.png" type="button" data-bs-dismiss="modal"></center>
+								<small><p class="cat m-0" align="left"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0" align="left">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-05" src="img/int-05s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-05" tabindex="-1" aria-labelledby="int-05Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<center><img src="img/int-05.png" class="img-fluid my-2" alt="img/int-05.png" type="button" data-bs-dismiss="modal" style="max-width:75%"></center>
+								<small><p class="cat m-0" align="left"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir.Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0" align="left">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+					<div class="col">
+					  <!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-06" src="img/int-06s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal"  id="int-06" tabindex="-1" aria-labelledby="int-06Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/int-06.png" class="img-fluid my-2" alt="img/int-06.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-07" src="img/int-07s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-07" tabindex="-1" aria-labelledby="int-07Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/int-07.png" class="img-fluid my-2" alt="img/int-07.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0">Photography of the destruction process of the Sant Pere Màrtir church. Image taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#int-08" src="img/int-08s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="int-08" tabindex="-1" aria-labelledby="int-08Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/int-08.png" class="img-fluid my-2" alt="img/int-08.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0">Photography of the destruction process of the Sant Pere Màrtir church. Image taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#major-10" src="img/major-10s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="major-10" tabindex="-1" aria-labelledby="major-10Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/major-10.png" class="img-fluid my-2" alt="img/major-10.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> Fotografia del procés de d'enderroc de l'església de Sant Pere Màrtir. Imatge feta per Josep M. Rosal i d'Argullol actualment conservada a l'Arxiu Comarcal del Bages, recuperada de la pàgina web <i>Arxius en línia</i> de la Generalitat de Catalunya.</p></small>
+								<small><p class="eng d-none m-0">Photography of the destruction process of the Sant Pere Màrtir church. Image taken by Josep M. Rosal i d'Argullol currently conserved at the Arxiu Comarcal del Bages, taken from the Generalitat de Catalunya's webpage <i>Arxius en línia</i>.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+				    </div>
+				  </div>
+				</div>
+			  </div>
+          </div>
+<!--SALVAGUARDA -->
+		  <div class="carousel-item">
+              <div class="row align-items-center" style="height:80%">
+				<div class="container">
+				  <div class="row align-items-center">
+					<div class="col-8">
+					<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Salvaguarda i trasllat al museu</h1>
+					<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">Safeguarding and transfer to the museum</h1>
+					  <p class="cat" align="justify" style="font-size:1vw;">El Comitè de Salvament del Patrimoni Artístic, format el 25 de juliol a causa de l'assalt a la Seu d'aquell dia, van encarregar-se d'anar recollint tot allò que no havia estat engolit per les flames per a conservar-ho i evitar-ne la destrucció en els següents dies. Tots aquests objectes, entre els quals els fragments conservats del retaule del Roser de Sant Pere Màrtir, van ser traslladats a la Cova des del 6 d'agost de 1936<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Rubiralta Garriga, L. ‘Memòries d'en Lluís Rubiralta. El salvament del Patrimoni manresà durant la guerra civil.’. Regió-7 1981 Aug 06. (p.8)" style="text-decoration: none;">❝❞</a> sota la supervisió de Lluis Rubiralta.<br><br>
+					  La Cova era l'antiga antiga casa d'exercicis de la Companyia de Jesús, que havia esdevingut un immoble buit propietat de l'Estat quan es va dissoldre aquesta orde a tota Espanya l'any 1932, durant la II República-<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bassegoda Hugas, B. Lluís Rubiralta i Garriga (Manresa, 1902-Barcelona, 1980) i el salvament de l'art religiós a manresa durant la Guerra Civil. In La salvaguarda del patrimoni religiós català durant la Guerra Civil espanyola: III Jornada Museus i Patrimoni de l'Església a Catalunya 2017 (pp. 194-221). Alberto Velasco González, Marc Sureda i Jubany, coord. (p.200)" style="text-decoration: none;">❝❞</a>. A mesura que anaven arribant les peces s'anaven catalogant, però hem de pensar que era una catalogació moltes vegades feta de pressa i sense gaire informació ni context<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Rubiralta Garriga, L. ‘Memòries d'en Lluís Rubiralta. El salvament del Patrimoni manresà durant la guerra civil.’. Regió-7 1981 Apr. 02 (p.8)" style="text-decoration: none;">❝❞</a>. I fins i tot es va arribar a musealitzar part d'aquest magatzem immens d'obres.<br><br>
+					  Finalment, el 1941, quan ja no s'havia d'actuar amb tanta celeritat per a salvar peces de les flames, els fragments conservats del retaule del Roser va ser traslladat al museu de la ciutat de Manresa, embrió de l'actual.</p>
+					  <p class="eng d-none" align="justify" style="font-size:1vw;">The Artistic Heritage Rescue Committee, formed on July 25 due to the assault on the cathedral that day, was responsible for collecting everything that had not been thrown to the flames in order to preserve it and avoid its destruction in the following days. All of these objects, including the preserved fragments of the Rosary altarpiece of Sant Pere Màrtir, were transferred to <i>La Cova</i> from August 6, 1936<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Rubiralta Garriga, L. ‘Memòries d'en Lluís Rubiralta. El salvament del Patrimoni manresà durant la guerra civil.’. Regió-7 1981 Aug 06. (p.8)" style="text-decoration: none;">❝❞</a> under the supervision of Lluis Rubiralta. <br><br>
+					  <i>La Cova</i> was the former exercise house of the Company of Jesus, which had become an empty building owned by the Spanish State when this order was dissolved throughout Spain in 1932, during the Second Republic<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bassegoda Hugas, B. Lluís Rubiralta i Garriga (Manresa, 1902-Barcelona, 1980) i el salvament de l'art religiós a manresa durant la Guerra Civil. In La salvaguarda del patrimoni religiós català durant la Guerra Civil espanyola: III Jornada Museus i Patrimoni de l'Església a Catalunya 2017 (pp. 194-221). Alberto Velasco González, Marc Sureda i Jubany, coord. (p.200)" style="text-decoration: none;">❝❞</a>. As the works of art entered this place, they were catalogued, but we have to keep in mind that was often done quickly and without much information or context<a tabindex="0" class="link-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Rubiralta Garriga, L. ‘Memòries d'en Lluís Rubiralta. El salvament del Patrimoni manresà durant la guerra civil.’. Regió-7 1981 Apr. 02 (p.8)" style="text-decoration: none;">❝❞</a>. And part of this immense warehouse of works was even made a temporary museum. <br><br>
+					  Finally, in 1941, when it was no longer necessary to act so quickly to save pieces from its burning and destroying, the preserved fragments of the Rosary altarpiece were transferred to the museum of the city of Manresa, which along with others would be be the first pieces of the permanent collection.</p>
+					</div>
+					<div class="col ps-0" align="right">
+					<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#cova01" src="img/cova01s.png" class="img-fluid" alt="Responsive image" style="max-width: 75%;"><br><br>
+						<div class="modal" id="cova01" tabindex="-1" aria-labelledby="cova01Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/cova01.png" class="img-fluid my-2" alt="img/cova01.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> La Cova transformada en un museu format de les peces salvaguardades de la Guerra. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0"><i>La Cova</i> transformed into a museum made up of the artworks safeguarded from the War. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#cova02" src="img/cova02s.png" class="img-fluid" alt="Responsive image" style="max-width: 75%;"><br><br>
+						<div class="modal" id="cova02" tabindex="-1" aria-labelledby="cova02Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/cova02.png" class="img-fluid my-2" alt="img/cova02.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-2"> La Cova transformada en un museu format de les peces salvaguardades de la Guerra. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-2"><i>La Cova</i> transformed into a museum made up of the artworks safeguarded from the War. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+					<div class="col">
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#cova03" src="img/cova03s.png" class="img-fluid" alt="Responsive image" style="max-width: 75%;"><br><br>
+						<div class="modal" id="cova03" tabindex="-1" aria-labelledby="cova03Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/cova03.png" class="img-fluid my-2" alt="img/cova03.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0"> La Cova transformada en un museu format de les peces salvaguardades de la Guerra. Imatge feta per Lluís Rubiralta i Garriga, recuperada de la pàgina web de l'Associació Memòria i Història de Manresa <i>memoria.cat</i>.</p></small>
+								<small><p class="eng d-none m-0"><i>La Cova</i> transformed into a museum made up of the artworks safeguarded from the War. Image taken by Lluís Rubiralta i Garriga, taken from the Associació Memòria i Història de Manresa <i>memoria.cat</i> webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+						<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#fitxa" src="img/fitxas.png" class="img-fluid" alt="Responsive image" style="max-width: 75%;"><br><br>
+						<div class="modal" id="fitxa" tabindex="-1" aria-labelledby="fitxaLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/fitxa.png" class="img-fluid my-2" alt="img/fitxa.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0">Part d’una fitxa museogràfica d’un dels fragments del retaule del Roser dipositats al Museu de Manresa.</p></small>
+								<small><p class="eng d-none m-0"> Part of a museographic file of one of the fragments of the Rosary altarpiece preserved in the Manresa Museum.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+				  </div>
+				</div>
+              </div>
+		  </div>
+<!-- ACTUALITAT -->
+		  <div class="carousel-item" id="itemActualitat">
+              <div class="row align-items-center" style="height:80%">
+				<div class="container">
+				  <div class="row align-items-center" style="height: 100%">
+					<div class="col-8">
+					<h1 class="cat rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">El retaule del Roser avui</h1>
+					<h1 class="eng d-none rounded-3 py-2 px-5" style="background-image: url('img/header-sidemenu4.png');color:#e5e5e5; font-size:2.5vw;">The Rosary altarpiece today</h1>
+					  <p class="cat" align="justify" style="font-size:1vw;">Quan el 1941 el Museu de Manresa va reobrir al públic després de la Guerra Civil, la seva col·lecció es va veure augmentada per varies vies. Per una banda, la gran quantitat d'obres majoritàriament religioses resguardades a La Cova i que no tenien on tornar perquè el seu lloc d'origen havia estat desmantellat van ser acollides al Museu. La Cova, que havia estat un magatzem que més tard s'havia musealitzat era un espai d'ús temporal. Els objectes recopilats en les seves sales no podien romandre allí després de la guerra, i van passar a formar part de la col·lecció permanent del Museu de Manresa.<br><br>
+					  Per altra banda, ja abans de l'estiu de 1936 hi havia hagut entitats culturals com els Centres Excursionistes que s'havien encarregat d'estudiar i recopilar objectes patrimonials de Catalunya. En les seves seus els hi dedicaven un espai expositiu, amb la voluntat de valoritzar-los. Entenien el patrimoni com a part de la identitat catalana i de la història del poble i per aquest motiu tenien com a objectiu de culturitzar la ciutadania, a través de, entre altres iniciatives, crear museus per posar a l'abast de tothom la cultura. Per això, quan va acabar-se la Guerra Civil les col·leccions d'aquestes entitats van passar a formar part de la col·lecció permanent del Museu de la ciutat.<br><br>
+					  Els fragments del retaule del Roser de l'església de Sant Pere de Manresa formen part de la primera via. Un cop tret de l'església el 1936, va ser traslladat a La Cova i d'allà va ingressar al museu en una data incerta. D'aquest retaule  se'n conserven actualment al museu els 14 relleus principals, les 3 figures de l'escena del Calvari, les portes, els estípits gran part de les columnes i algun relleu decoratiu. Al llarg dels anys algun d'ells han pogut restaurar-se i actualment s'exposen al museu.</p>
+					  <p class="eng d-none" align="justify" style="font-size:1vw;">When the Manresa Museum reopened to the public in 1941 after the Civil War, its collection was increased in several ways. On the one hand, the large number of mostly religious art works protected in <i>La Cova</i> and which had nowhere to return because their place of origin had been dismantled were incorporated in the Museum collection. The objects collected in the rooms of <i>La Cova</i> could not remain there after the war, and became part of the permanent collection of the Manresa Museum.<br><br>
+					  On the other hand, before the summer of 1936 there had already been cultural entities such as the Excursionist Centers that had been in charge of studying and compiling heritage objects from Catalonia. In their headquarters, they dedicated an exhibition space to them, with the intention of valorise them. They understood that heritage was a part of the Catalan identity and the history of the town, and for this reason they had the objective of culturalizing the citizens. They intended to do that though, among other initiatives, the creation of museums to make heritage objects accessible to everyone. For this reason, when the Civil War ended, the collections of these entities became part of the permanent collection of the Manresa’s Museum.<br><br>
+					  The fragments of the Rosary altarpiece of the church of Sant Pere de Manresa formed part the first case. Once removed from the church in 1936, it was transferred to <i>La Cova</i> and from there entered the museum at an uncertain date. From this altarpiece, the 14 main reliefs, the 3 figures from the Calvary scene, the doors, the stipes, most of the columns and some decorative reliefs are currently preserved in the museum. Over the years, some of them have been able to be restored and are currently on display in the museum.</p>
+					</div>
+					<div class="col ps-4 ms-4">
+					<!-- FOTO QUE AL FER CLICK MODAL -->
+						<img type="button" data-bs-toggle="modal" data-bs-target="#museu1950" src="img/museu1950s.png" class="img-fluid" alt="Responsive image" style="max-width: 60%;"><br><br>
+						<div class="modal" id="museu1950" tabindex="-1" aria-labelledby="museu1950Label" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content user-select-none">
+							  <div class="modal-header border-0 pb-0">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							  </div>
+							  <div class="modal-body pt-0">
+								<img src="img/museu1950.png" class="img-fluid my-2" alt="img/museu1950.png" type="button" data-bs-dismiss="modal">
+								<small><p class="cat m-0">Sala del Museu de Manresa prop de 1950, en el seu emplaçament al Col·legi de Sant Ignasi. Imatge recuperada de la pàgina web del Museu Comarcal de Manresa.</p></small>
+								<small><p class="eng d-none m-0">Hall of the Museum of Manresa around 1950, in its location at the former exercise house Sant Ignasi. Image taken from the Museu Comarcal de Manresa webpage.</p></small>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<!-- FI FOTO MODAL -->
+					</div>
+				  </div>
+				</div>
+              </div>
+		  </div>
+        </div>
+      </div>
+	  
+	<!-- MODAL CREDITS -->
+	  <div class="modal" id="credits" tabindex="-1" aria-labelledby="creditsLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content border-0 user-select-none" style="opacity: 0.9;">
+		  <div class="modal-header border-0">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+			<div class="modal-body pt-0">
+			   <div class="container-fluid">
+				<div class="row">
+				  <p class="cat">Aquest projecte s'ha dut a terme en el marc del període d'estada internacional al VCLab CNR-ISTI de la tesi doctoral que l'Anna Pagès i Vilà està fent a l'Universitat de Girona. Fet sota la supervisió de Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) i dels directors de tesi Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) i Dr. Joan Bosch (UdG).</p>
+				  <p class="eng d-none">This project has been carried out as part of the international stay period at VCLab CNR-ISTI for the doctoral thesis that Anna Pagès i Vilà is doing at the Universtat de Girona. Done under the supervision of Dr. Marco Callieri (ISTI-CNR), Dr. Marco Potenziani (ISTI-CNR) and thesis supervisors Dr. Xavier Pueyo (UdG), Dr. Imanol Muñoz-Pandiella (UPC) and Dr. Joan Bosch (UdG).</p>
+				</div>
+				<div class="row">
+				  <div class="col me-1">
+					<div class="row mt-3">
+					<center>
+					  <img align="right" class="ms-1 py-2" src="img/logoupc.png" width="70px;">
+					  <img align="right" class="me-2 py-3" src="img/logovirvig.png" width="80px;">
+					  <img align="right" class="mx-2 py-2" src="img/logoudg.png" width="80px;">
+					</center>
+					</div>
+					<div class="row">
+					<center><img align="right" src="img/logoesp.png" width="250px;"></center>
+					</div>
+				  </div>
+				  <div class="col ms-1">
+					<br><center><img align="left" src="img/vcglogo.png" width="250px;"></center>
+				  </div>
+				</div>
+				<div class="row mt-5">
+				  <p class="cat mb-2" align="justify"><br><small>Volem agrair al Museu de Manresa – Museu Barroc de Catalunya per concedir-nos accés a les obres d'art i permetre la seva digitalització, així com autoritzar-nos el seu ús. També volem expressar el nostre agraïment al programa GIRAVOLT del Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) per facilitar-nos els models fotogramètrics de les escenes de l'Anunciació i de la Pentecosta del retaule i autoritzar-nos-ne l'ús.</p>
+				  <p class="cat" align="justify">Aquest treball ha estat parcialment suportat pels projectes PID2021-122136OB-C21 i PID2021-122136OB-C22 finançats per MCIN/AEI/ 10.13039/501100011033 i pel FEDER Una manera de fer Europa, així com pel projecte PID2020-114339GB-C21 finançat pel MCIN/AEI, i desenvolupat en el context del Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 amb el suport del Departament de Recerca i Universitats de la Generalitat de Catalunya.</small></p>
+				  <p class="eng d-none" align="justify"><br><small>We would like to thank the Museu de Manresa – Museu Barroc de Catalunya in granting access to the artworks and permitting their digitization, and authorizing us their use. We also want to express our gratitude to the GIRAVOLT program of the Departament de Cultura de la Generalitat de Catalunya (https://patrimoni.gencat.cat/en/giravolt) for providing us with the photogrammetric models of the scenes of the Annunciation and Pentecost of the altarpiece and granting us their use.</p>
+				  <p class="eng d-none" align="justify">This work has been partially supported by the projects PID2021-122136OB-C21 and PID2021-122136OB-C22 funded by MCIN/AEI/ 10.13039/501100011033 and by ERDF A way of making Europe and by the project PID2020-114339GB-C21 funded by the MCIN/AEI, and developed in the context of Grup de Recerca Consolidat ViRVIG 2021-SGR-01035 with the support of the Departament de Recerca i Universitats of the Generalitat de Catalunya.</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- FI MODAL CREDITS -->
+      <!-- Carousel buttons -->
+      <button class="unclickable carousel-control-prev" type="button" data-bs-target="#vertical-carousel" data-bs-slide="prev">
+        <span class="clickable carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="unclickable carousel-control-next" type="button" data-bs-target="#vertical-carousel" data-bs-slide="next">
+        <span class="clickable carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap513.bundle.min.js"></script>
+  <script src="js/historia.js"></script>
+  <script type="text/javascript">
+$('.modal').on('shown.bs.modal', function() {
+  $(this).before($('.modal-backdrop'));
+  $(this).css("z-index", parseInt($('.modal-backdrop').css('z-index')) + 1);
+  $('.carousel-indicators').css("z-index",1);
+  $(".carousel-control-prev-icon").addClass("visually-hidden");
+  $(".carousel-control-next-icon").addClass("visually-hidden");
+});
+
+$('.modal').on('hidden.bs.modal', function() {
+  $('.carousel-indicators').css("z-index",2);
+  $(".carousel-control-prev-icon").removeClass("visually-hidden");
+  $(".carousel-control-next-icon").removeClass("visually-hidden");
+  updateVisibility();
+});
+
+
+//remove arrows on first and last slides
+//The jQuery add/remove class functions both check for duplicates internally, meaning that calling addClass twice only will add the class once
+//per això he posat visually-hidden directament a la del Roser, per inici obrir pàgina
+function updateVisibility() {
+    if ($("#itemRoser").hasClass("active")) {
+        $(".carousel-control-prev-icon").addClass("visually-hidden");
+	} else if ($("#itemActualitat").hasClass("active")){
+			   $(".carousel-control-next-icon").addClass("visually-hidden");
+    } else {
+        $(".carousel-control-prev-icon").removeClass("visually-hidden");
+		$(".carousel-control-next-icon").removeClass("visually-hidden");
+    }
+}
+
+$(document).on("slid.bs.carousel", function(){
+	updateVisibility();
+});
+
+// NO RIGHT CLICK
+$(document).bind("contextmenu",function(e){
+  return false;
+});
+// NO RIGHT CLICK
+
+// LANGUAGE FUNCTIONS
+var currLang = "cat";
+
+function setLan(newLanguage) {
+	$(".cat, .eng").addClass('d-none');
+	$("." + newLanguage).toggleClass('d-none');
+	currLang = newLanguage;
+
+	$(".lngs > .active").button('toggle');
+	switch(newLanguage) {
+	  case 'eng':
+		$('.en').button('toggle');
+		break;
+	  default:
+		$('.ca').button('toggle');
+	}
+}
+
+function openPage(url){
+	window.open(url + "?lang=" + currLang, "_self"); 
+}
+// LANGUAGE FUNCTIONS
+
+// TIMER PAGE RELOAD
+var tim;
+
+function timer() {
+	window.clearTimeout(tim);  // cancel the timer on each click
+	tim = setTimeout(function() {currLang = "cat"; openPage('menu.html');},300000);  // set new 5 minutes timer
+}
+
+window.onpointerdown = function() {timer()}
+// TIMER PAGE RELOAD
+
+$(document).ready(function() {
+// LANGUAGE SETUP START
+	var currParam;
+	var pageParams = [];
+	var paramString = document.URL.split('?')[1];
+	if(paramString != undefined) {
+		paramString = paramString.split('&');
+		for(var i = 0; i < paramString.length; i++){
+			currParam = paramString[i].split('=');
+			if(currParam[0] == "lang")
+				currLang = currParam[1];
+		}
+	}
+
+	setLan(currLang);
+
+	$(".lng").click(function() { setLan($(this).attr('lan')); });
+// LANGUAGE SETUP START
+
+timer();
+});
+
+  var popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  var popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
+  trigger: 'focus'
+  }))
+
+</script>
+</body>
+
+</html>
