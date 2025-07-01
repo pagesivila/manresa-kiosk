@@ -5,9 +5,7 @@
 # setup:
   setup_instructions: https://3dhop.net/howto.php
   
-  notes: >
-    Download the 3DHOP package and follow the official HOWTO guide to get the viewer
-    working in your local environment.
+  Follow the official HOWTO guide to get the viewer working in your local environment.
 
 # interface_pages:
   - menu.html: Main app interface
