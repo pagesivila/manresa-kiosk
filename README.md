@@ -4,7 +4,9 @@
 
 # setup:
   download_3dhop: https://3dhop.net/download.php
+  
   setup_instructions: https://3dhop.net/howto.php
+  
   notes: >
     Download the 3DHOP package and follow the official HOWTO guide to get the viewer
     working in your local environment.
