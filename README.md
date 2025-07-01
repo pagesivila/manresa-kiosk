@@ -3,8 +3,6 @@
   a historical altarpiece. Designed for use in webpages and touchscreen kiosks.
 
 # setup:
-  download_3dhop: https://3dhop.net/download.php
-  
   setup_instructions: https://3dhop.net/howto.php
   
   notes: >
